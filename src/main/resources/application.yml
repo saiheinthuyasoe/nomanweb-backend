@@ -1,0 +1,23 @@
+spring.application.name: nomanweb
+
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://db.blatroswszslgzoomydb.supabase.co:5432/postgres
+    username: postgres
+    password: hellonomanweb
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+firebase:
+  credentials: classpath:firebase-service-account.json
